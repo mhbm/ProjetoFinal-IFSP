@@ -12,4 +12,10 @@
     <string name="inserir">Cadastrar</string>
     <string name="listar">Listar Cadastros</string>
     <string name="voltar">Voltar</string>
+    <string name="nome_obrigatorio">Nome é de preenchimento obrigatório!</string>
+    <string name="cpf_obrigatorio">CPF é de preenchimento obrigatório!</string>
+    <string name="idade_obrigatorio">Idade é de preenchimento obrigatório!</string>
+    <string name="telefone_obrigatorio">Telefone é de preenchimento obrigatório!</string>
+    <string name="email_obrigatorio">Email é de preenchimento obrigatório!</string>
+    <string name="registro_salvo_sucesso">Registro salvo com sucesso!</string>
 </resources>
