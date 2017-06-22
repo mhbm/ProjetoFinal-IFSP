@@ -30,7 +30,7 @@ O código deve estar com cada uma de suas etapas comentadas. Por exemplo, antes 
 
 Desenvolva uma aplicação para Android que contenha no mínimo duas Activity: (1) uma para a tela inicial de apresentação; (2) e uma para inserção e listagem dos dados, via Banco de Dados. Ambas devem possuir um controle de navegação entre elas, podendo ir e voltar em relação a cada Activity. A imagem abaixo, ilustra um pequeno exemplo de prototipação da aplicação.
 
-![alt text](http://ead.ti.srt.ifsp.edu.br/pluginfile.php/8220/mod_assign/intro/Sem%20t%C3%ADtulo.png)
+![Imagem do projeto](descricaoProjeto.png)
 
 A primeira Acitivity será uma tela de apresentação. Ela poderá conter algumas informações sobre o aplicativo, exemplo: Nome do aplicativo (cada um pode colocar o seu), nome do desenvolvedor, versão, imagens ilustrativas, entre outros (podem usar a criatividade). E obrigatoriamente um botão “Inserir Dados” que ao clicar irá realizar a navegação para a segunda Activity, ou seja, ao clicar ele irá abrir a Segunda Acitivity (Similar ao vídeo da Semana 3).
 
