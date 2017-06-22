@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ProjetoFinalMateus</string>
+    <string name="textview">TextView</string>
+    <string name="cadastrar">Cadastrar Pessoa Física</string>
+    <string name="desenvolvido">Desenvolvido por Mateus Macedo - v1.0</string>
+    <string name="dadosPessoaFisica">Dados Pessoa Física</string>
+    <string name="nome">Nome</string>
+    <string name="cpf">CPF</string>
+    <string name="idade">Idade</string>
+    <string name="telefone">Telefone</string>
+    <string name="email">Email</string>
+</resources>
