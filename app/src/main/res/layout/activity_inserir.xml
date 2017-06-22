@@ -98,6 +98,22 @@
 
         android:inputType="text" />
 
+    <Button
+        android:id="@+id/btninserir"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:text="@string/inserir" />
 
+    <Button
+        android:id="@+id/btnlistar"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:text="@string/listar" />
+
+    <Button
+        android:id="@+id/btnvoltarinicio"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:text="@string/voltar" />
 
 </LinearLayout>

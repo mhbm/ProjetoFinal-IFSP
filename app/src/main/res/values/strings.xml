@@ -9,4 +9,7 @@
     <string name="idade">Idade</string>
     <string name="telefone">Telefone</string>
     <string name="email">Email</string>
+    <string name="inserir">Cadastrar</string>
+    <string name="listar">Listar Cadastros</string>
+    <string name="voltar">Voltar</string>
 </resources>
