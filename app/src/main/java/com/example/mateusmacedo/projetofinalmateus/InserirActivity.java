@@ -124,13 +124,13 @@ public class InserirActivity extends AppCompatActivity {
             pessoaModel.setNome(editTextNome.getText().toString().trim());
 
             /*SETANDO O CPF*/
-            pessoaModel.setCpf(Integer.valueOf(editTextCpf.getText().toString().trim()));
+            pessoaModel.setCpf(editTextCpf.getText().toString().trim());
 
             /*SETANDO O Idade*/
             pessoaModel.setIdade(Integer.valueOf(editTextIdade.getText().toString().trim()));
 
             /*SETANDO O Telefone*/
-            pessoaModel.setTelefone(Integer.valueOf(editTextTelefone.getText().toString().trim()));
+            pessoaModel.setTelefone(editTextTelefone.getText().toString().trim());
 
             /*SETANDO O Email*/
             pessoaModel.setEmail(editTextEmail.getText().toString().trim());

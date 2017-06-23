@@ -28,8 +28,6 @@ public class ListarActivity extends AppCompatActivity {
 
     }
 
-
-
     //MÉTODO QUE CONSULTA AS PESSOAS CADASTRADAS
     protected  void carregarPessoasCadastradas(){
 

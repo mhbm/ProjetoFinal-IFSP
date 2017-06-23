@@ -69,9 +69,9 @@ public class PessoaController {
         //ADICIONANDO OS DADOS DA PESSOA
         pessoaModel.setCodigo(cursor.getInt(cursor.getColumnIndex("idPessoa")));
         pessoaModel.setNome(cursor.getString(cursor.getColumnIndex("nome")));
-        pessoaModel.setCpf(cursor.getInt(cursor.getColumnIndex("cpf")));
+        pessoaModel.setCpf(cursor.getString(cursor.getColumnIndex("cpf")));
         pessoaModel.setIdade(cursor.getInt(cursor.getColumnIndex("idade")));
-        pessoaModel.setTelefone(cursor.getInt(cursor.getColumnIndex("telefone")));
+        pessoaModel.setTelefone(cursor.getString(cursor.getColumnIndex("telefone")));
         pessoaModel.setEmail(cursor.getString(cursor.getColumnIndex("email")));
 
         //RETORNANDO A PESSOA
@@ -110,9 +110,9 @@ public class PessoaController {
             //ADICIONANDO OS DADOS DA PESSOA
             pessoaModel.setCodigo(cursor.getInt(cursor.getColumnIndex("idPessoa")));
             pessoaModel.setNome(cursor.getString(cursor.getColumnIndex("nome")));
-            pessoaModel.setCpf(cursor.getInt(cursor.getColumnIndex("cpf")));
+            pessoaModel.setCpf(cursor.getString(cursor.getColumnIndex("cpf")));
             pessoaModel.setIdade(cursor.getInt(cursor.getColumnIndex("idade")));
-            pessoaModel.setTelefone(cursor.getInt(cursor.getColumnIndex("telefone")));
+            pessoaModel.setTelefone(cursor.getString(cursor.getColumnIndex("telefone")));
             pessoaModel.setEmail(cursor.getString(cursor.getColumnIndex("email")));
 
             //ADICIONANDO UMA PESSOA NA LISTA

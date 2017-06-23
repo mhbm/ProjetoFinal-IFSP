@@ -7,9 +7,9 @@ package com.example.mateusmacedo.projetofinalmateus.model;
 public class PessoaModel {
     private Integer codigo;
     private String nome;
-    private Integer cpf;
+    private String cpf;
     private Integer idade;
-    private Integer telefone;
+    private String telefone;
     private String email;
 
     public Integer getCodigo() {
@@ -28,11 +28,11 @@ public class PessoaModel {
         this.nome = nome;
     }
 
-    public Integer getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(Integer cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
@@ -44,11 +44,11 @@ public class PessoaModel {
         this.idade = idade;
     }
 
-    public Integer getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(Integer telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 

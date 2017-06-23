@@ -14,7 +14,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:singleLine="true"
+        android:inputType="text"
         android:id="@+id/editTextNomeEditar" />
 
     <TextView
@@ -23,13 +23,12 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/cpf"
         android:id="@+id/textViewCpf"
-        android:inputType="number"
         />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:singleLine="true"
+        android:inputType="number"
         android:id="@+id/editTextCpfEditar" />
 
     <TextView
@@ -38,13 +37,12 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/idade"
         android:id="@+id/textViewIdade"
-        android:inputType="number"
         />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:singleLine="true"
+        android:inputType="number"
         android:id="@+id/editTextIdadeEditar" />
 
     <TextView
@@ -53,13 +51,12 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/telefone"
         android:id="@+id/textViewTelefone"
-        android:inputType="number"
         />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:singleLine="true"
+        android:inputType="number"
         android:id="@+id/editTextTelefoneEditar" />
 
     <TextView
@@ -72,7 +69,6 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:singleLine="true"
         android:id="@+id/editTextEmailEditar" />
 
 

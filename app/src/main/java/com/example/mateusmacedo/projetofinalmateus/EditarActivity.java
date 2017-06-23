@@ -130,9 +130,9 @@ public class EditarActivity extends AppCompatActivity {
             /*SETANDO O VALOR DO CAMPO NOME*/
             pessoaModel.setNome(editTextNome.getText().toString().trim());
 
-            pessoaModel.setCpf(Integer.parseInt(editTextCpf.getText().toString()));
+            pessoaModel.setCpf(editTextCpf.getText().toString());
 
-            pessoaModel.setTelefone(Integer.parseInt(editTextTelefone.getText().toString()));
+            pessoaModel.setTelefone(editTextTelefone.getText().toString());
 
             pessoaModel.setIdade(Integer.parseInt(editTextIdade.getText().toString()));
 
