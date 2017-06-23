@@ -17,7 +17,6 @@ import java.util.List;
 public class PessoaController {
     DatabaseUtil databaseUtil;
 
-
     public PessoaController(Context context) {
         databaseUtil = new DatabaseUtil(context);
     }
@@ -34,6 +33,10 @@ public class PessoaController {
 
         databaseUtil.getConexaoDataBase().insert("pessoas", null, contentValues);
 
+    }
+
+    public void resetarBanco(){
+        databaseUtil.onUpgrade(databaseUtil.getConexaoDataBase(),1,1);
     }
 
     public void atualizar(PessoaModel pessoaModel){
@@ -70,7 +73,7 @@ public class PessoaController {
         pessoaModel.setCodigo(cursor.getInt(cursor.getColumnIndex("idPessoa")));
         pessoaModel.setNome(cursor.getString(cursor.getColumnIndex("nome")));
         pessoaModel.setCpf(cursor.getString(cursor.getColumnIndex("cpf")));
-        pessoaModel.setIdade(cursor.getInt(cursor.getColumnIndex("idade")));
+        pessoaModel.setIdade(cursor.getString(cursor.getColumnIndex("idade")));
         pessoaModel.setTelefone(cursor.getString(cursor.getColumnIndex("telefone")));
         pessoaModel.setEmail(cursor.getString(cursor.getColumnIndex("email")));
 
@@ -111,7 +114,7 @@ public class PessoaController {
             pessoaModel.setCodigo(cursor.getInt(cursor.getColumnIndex("idPessoa")));
             pessoaModel.setNome(cursor.getString(cursor.getColumnIndex("nome")));
             pessoaModel.setCpf(cursor.getString(cursor.getColumnIndex("cpf")));
-            pessoaModel.setIdade(cursor.getInt(cursor.getColumnIndex("idade")));
+            pessoaModel.setIdade(cursor.getString(cursor.getColumnIndex("idade")));
             pessoaModel.setTelefone(cursor.getString(cursor.getColumnIndex("telefone")));
             pessoaModel.setEmail(cursor.getString(cursor.getColumnIndex("email")));
 

@@ -45,14 +45,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
-        android:inputType="number" />
+        android:inputType="number"
+        android:maxLength="11"
+        />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/idade"
-
         android:layout_marginLeft="20dp"
         />
 
@@ -61,7 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
-
+        android:maxLength="3"
         android:inputType="number" />
 
     <TextView
@@ -78,7 +79,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
-
+        android:maxLength="11"
         android:inputType="number" />
 
     <TextView
@@ -95,8 +96,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
-
-        android:inputType="text" />
+        android:inputType="textEmailAddress"
+         />
 
     <Button
         android:id="@+id/btninserir"

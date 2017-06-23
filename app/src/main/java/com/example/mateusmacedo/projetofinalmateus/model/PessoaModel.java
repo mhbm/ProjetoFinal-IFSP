@@ -8,7 +8,7 @@ public class PessoaModel {
     private Integer codigo;
     private String nome;
     private String cpf;
-    private Integer idade;
+    private String idade;
     private String telefone;
     private String email;
 
@@ -36,11 +36,11 @@ public class PessoaModel {
         this.cpf = cpf;
     }
 
-    public Integer getIdade() {
+    public String getIdade() {
         return idade;
     }
 
-    public void setIdade(Integer idade) {
+    public void setIdade(String idade) {
         this.idade = idade;
     }
 

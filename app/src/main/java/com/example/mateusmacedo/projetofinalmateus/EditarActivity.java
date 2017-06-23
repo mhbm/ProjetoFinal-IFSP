@@ -134,7 +134,7 @@ public class EditarActivity extends AppCompatActivity {
 
             pessoaModel.setTelefone(editTextTelefone.getText().toString());
 
-            pessoaModel.setIdade(Integer.parseInt(editTextIdade.getText().toString()));
+            pessoaModel.setIdade(editTextIdade.getText().toString());
 
             pessoaModel.setEmail(editTextEmail.getText().toString().trim());
 
