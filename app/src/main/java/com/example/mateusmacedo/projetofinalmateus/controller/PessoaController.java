@@ -22,7 +22,7 @@ public class PessoaController {
         databaseUtil = new DatabaseUtil(context);
     }
 
-    public void inserirCadastro (PessoaModel pessoaModel) {
+    public void inserirCadastro(PessoaModel pessoaModel) {
 
         ContentValues contentValues = new ContentValues();
 
@@ -32,20 +32,49 @@ public class PessoaController {
         contentValues.put("telefone", pessoaModel.getTelefone());
         contentValues.put("email", pessoaModel.getEmail());
 
-        databaseUtil.getConexaoDataBase().insert("pessoas",null,contentValues);
+        databaseUtil.getConexaoDataBase().insert("pessoas", null, contentValues);
+
     }
 
-    public List<PessoaModel> SelecionarTodos(){
+    public Integer excluir(int codigo) {
+        return databaseUtil.getConexaoDataBase().delete("pessoas","idPessoa = ?", new String[]{Integer.toString(codigo)});
+    }
+
+    public PessoaModel getPessoa(int codigo) {
+
+
+        Cursor cursor = databaseUtil.getConexaoDataBase().rawQuery("SELECT * FROM pessoas WHERE idPessoa= " + codigo, null);
+
+        cursor.moveToFirst();
+
+        ///CRIANDO UMA NOVA PESSOAS
+        PessoaModel pessoaModel = new PessoaModel();
+
+        //ADICIONANDO OS DADOS DA PESSOA
+        pessoaModel.setCodigo(cursor.getInt(cursor.getColumnIndex("idPessoa")));
+        pessoaModel.setNome(cursor.getString(cursor.getColumnIndex("nome")));
+        pessoaModel.setCpf(cursor.getInt(cursor.getColumnIndex("cpf")));
+        pessoaModel.setIdade(cursor.getInt(cursor.getColumnIndex("idade")));
+        pessoaModel.setTelefone(cursor.getInt(cursor.getColumnIndex("telefone")));
+        pessoaModel.setEmail(cursor.getString(cursor.getColumnIndex("email")));
+
+        //RETORNANDO A PESSOA
+        return pessoaModel;
+
+    }
+
+    public List<PessoaModel> selecionarTodos() {
         List<PessoaModel> pessoas = new ArrayList<PessoaModel>();
 
         StringBuilder stringBuilderQuery = new StringBuilder();
         stringBuilderQuery.append(" SELECT      ");
+        stringBuilderQuery.append("        idPessoa,");
         stringBuilderQuery.append("        nome,");
         stringBuilderQuery.append("        cpf,");
         stringBuilderQuery.append("        idade,");
         stringBuilderQuery.append("        telefone,");
-        stringBuilderQuery.append("        email");
-        stringBuilderQuery.append("FROM pessoas ");
+        stringBuilderQuery.append("        email  ");
+        stringBuilderQuery.append("FROM pessoas  ");
         stringBuilderQuery.append("order by nome ");
 
         //CONSULTANDO OS REGISTROS CADASTRADOS
@@ -57,12 +86,13 @@ public class PessoaController {
         PessoaModel pessoaModel;
 
         //REALIZA A LEITURA DOS REGISTROS ENQUANTO NÃO FOR O FIM DO CURSOR
-        while (!cursor.isAfterLast()){
+        while (!cursor.isAfterLast()) {
 
             /* CRIANDO UMA NOVA PESSOAS */
-            pessoaModel =  new PessoaModel();
+            pessoaModel = new PessoaModel();
 
             //ADICIONANDO OS DADOS DA PESSOA
+            pessoaModel.setCodigo(cursor.getInt(cursor.getColumnIndex("idPessoa")));
             pessoaModel.setNome(cursor.getString(cursor.getColumnIndex("nome")));
             pessoaModel.setCpf(cursor.getInt(cursor.getColumnIndex("cpf")));
             pessoaModel.setIdade(cursor.getInt(cursor.getColumnIndex("idade")));
@@ -75,7 +105,6 @@ public class PessoaController {
             //VAI PARA O PRÓXIMO REGISTRO
             cursor.moveToNext();
         }
-
 
         return pessoas;
     }

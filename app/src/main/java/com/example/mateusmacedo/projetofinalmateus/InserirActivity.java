@@ -1,5 +1,6 @@
 package com.example.mateusmacedo.projetofinalmateus;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -14,6 +15,7 @@ public class InserirActivity extends AppCompatActivity {
 
     Button buttonVoltarInicio;
     Button buttonSalvarCadastro;
+    Button buttonListar;
 
     EditText editTextNome;
     EditText editTextCpf;
@@ -28,6 +30,8 @@ public class InserirActivity extends AppCompatActivity {
 
         this.setarVariaveis();
 
+        this.criarEventosBotoes();
+
     }
 
     protected void setarVariaveis() {
@@ -35,9 +39,10 @@ public class InserirActivity extends AppCompatActivity {
         this.editTextCpf = (EditText) this.findViewById(R.id.cpf);
         this.editTextIdade = (EditText) this.findViewById(R.id.idade);
         this.editTextTelefone = (EditText) this.findViewById(R.id.telefone);
-        this.editTextEmail = (EditText) this.findViewById(R.id.cpf);
+        this.editTextEmail = (EditText) this.findViewById(R.id.email);
         buttonVoltarInicio = (Button) findViewById(R.id.btnvoltarinicio);
-        buttonSalvarCadastro = (Button) findViewById(R.id.btncadastrar);
+        buttonSalvarCadastro = (Button) findViewById(R.id.btninserir);
+        buttonListar = (Button) findViewById(R.id.btnlistar);
     }
 
     protected void criarEventosBotoes() {
@@ -58,6 +63,19 @@ public class InserirActivity extends AppCompatActivity {
                 Salvar_onClick();
             }
         });
+
+        buttonListar.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+                //REDIRECIONA PARA A TELA PRINCIPAL
+                Intent intentMainActivity = new Intent(getApplicationContext(), ListarActivity.class);
+                startActivity(intentMainActivity);
+            }
+        });
+
+
     }
 
     //VALIDA OS CAMPOS E SALVA AS INFORMAÇÕES NO BANCO DE DADOS

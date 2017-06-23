@@ -27,12 +27,12 @@ public class DatabaseUtil extends SQLiteOpenHelper {
         StringBuilder stringBuilderCreateTable = new StringBuilder();
 
         stringBuilderCreateTable.append(" CREATE TABLE pessoas (");
-        stringBuilderCreateTable.append("        idPessoa      INTEGER  PRIMARY KEY AUTOINCREMENT, ");
+        stringBuilderCreateTable.append("        idPessoa      INTEGER  PRIMARY KEY AUTOINCREMENT NOT NULL, ");
         stringBuilderCreateTable.append("        nome          TEXT     NOT NULL,            ");
-        stringBuilderCreateTable.append("        cpf           INTEGER  NOT NULL,            ");
+        stringBuilderCreateTable.append("        cpf           INTEGER(11)  NOT NULL,            ");
         stringBuilderCreateTable.append("        idade         INTEGER  NOT NULL,            ");
-        stringBuilderCreateTable.append("        telefone      INTEGER  NOT NULL,            ");
-        stringBuilderCreateTable.append("        email         TEXT     NOT NULL,            ");
+        stringBuilderCreateTable.append("        telefone      INTEGER(11)  NOT NULL,            ");
+        stringBuilderCreateTable.append("        email         TEXT     NOT NULL            )");
 
 
         db.execSQL(stringBuilderCreateTable.toString());

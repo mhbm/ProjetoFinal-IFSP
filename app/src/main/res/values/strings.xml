@@ -18,4 +18,7 @@
     <string name="telefone_obrigatorio">Telefone é de preenchimento obrigatório!</string>
     <string name="email_obrigatorio">Email é de preenchimento obrigatório!</string>
     <string name="registro_salvo_sucesso">Registro salvo com sucesso!</string>
+    <string name="codigoPessoa">Código</string>
+    <string name="excluir">Excluir</string>
+    <string name="editar">Editar</string>
 </resources>
