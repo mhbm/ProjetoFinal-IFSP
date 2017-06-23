@@ -36,6 +36,22 @@ public class PessoaController {
 
     }
 
+    public void atualizar(PessoaModel pessoaModel){
+
+        ContentValues contentValues =  new ContentValues();
+
+        /*MONTA OS PARAMENTROS PARA REALIZAR UPDATE NOS CAMPOS*/
+        contentValues.put("nome", pessoaModel.getNome());
+        contentValues.put("cpf", pessoaModel.getCpf());
+        contentValues.put("idade", pessoaModel.getIdade());
+        contentValues.put("telefone", pessoaModel.getTelefone());
+        contentValues.put("email", pessoaModel.getEmail());
+
+        /*REALIZANDO UPDATE PELA CHAVE DA TABELA*/
+        
+        databaseUtil.getConexaoDataBase().update("pessoas", contentValues, "idPessoa = ?", new String[]{Integer.toString(pessoaModel.getCodigo())});
+    }
+
     public Integer excluir(int codigo) {
         return databaseUtil.getConexaoDataBase().delete("pessoas","idPessoa = ?", new String[]{Integer.toString(codigo)});
     }

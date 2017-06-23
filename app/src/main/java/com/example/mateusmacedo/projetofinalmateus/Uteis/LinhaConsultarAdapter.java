@@ -1,6 +1,7 @@
 package com.example.mateusmacedo.projetofinalmateus.Uteis;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.mateusmacedo.projetofinalmateus.EditarActivity;
 import com.example.mateusmacedo.projetofinalmateus.ListarActivity;
 import com.example.mateusmacedo.projetofinalmateus.R;
 import com.example.mateusmacedo.projetofinalmateus.controller.PessoaController;
@@ -32,6 +34,8 @@ public class LinhaConsultarAdapter extends BaseAdapter {
     //CIRANDO UM OBJETO DA NOSSA CLASSE QUE FAZ ACESSO AO BANCO DE DADOS
     PessoaController pessoaController;
 
+    TextView listaVazia ;
+
     //CRIANDO UM OBJETO DA NOSSA ATIVIDADE QUE CONTEM A LISTA
     private ListarActivity consultarActivity;
 
@@ -43,12 +47,12 @@ public class LinhaConsultarAdapter extends BaseAdapter {
         this.consultarActivity = consultarActivity;
         this.layoutInflater = (LayoutInflater) this.consultarActivity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.pessoaController = new PessoaController(consultarActivity);
+        this.listaVazia = (TextView) this.consultarActivity.findViewById(R.id.textViewPessoasVazia);
     }
 
     //RETORNA A QUANTIDADE DE REGISTROS DA LISTA
     @Override
     public int getCount() {
-
         return pessoaModels.size();
     }
 
@@ -65,7 +69,6 @@ public class LinhaConsultarAdapter extends BaseAdapter {
     //ESSE MÉTODO SETA OS VALORES DE UM ITEM DA NOSSA LISTA DE PESSOAS PARA UMA LINHA DO NOSSO LISVIEW
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
-
 
         //CRIANDO UM OBJETO DO TIPO View PARA ACESSAR O NOSSO ARQUIVO DE LAYOUT activity_row_consultar.xml
         final View viewLinhaLista = layoutInflater.inflate(R.layout.activity_row_listar, null);
@@ -131,11 +134,18 @@ public class LinhaConsultarAdapter extends BaseAdapter {
         buttonEditar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intentRedirecionar = new Intent(consultarActivity, EditarActivity.class);
 
+                intentRedirecionar.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+                intentRedirecionar.putExtra("idPessoa",pessoaModels.get(position).getCodigo());
+
+                consultarActivity.startActivity(intentRedirecionar);
+
+                consultarActivity.finish();
 
             }
         });
-
 
         return viewLinhaLista;
     }

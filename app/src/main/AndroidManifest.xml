@@ -22,6 +22,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".ListarActivity"></activity>
+        <activity android:name=".EditarActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

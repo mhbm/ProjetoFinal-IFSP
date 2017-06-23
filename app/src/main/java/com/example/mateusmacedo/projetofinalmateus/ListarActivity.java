@@ -40,6 +40,7 @@ public class ListarActivity extends AppCompatActivity {
 
         //SETA O ADAPTER DA LISTA COM OS REGISTROS RETORNADOS DA BASE
         listViewPessoas.setAdapter(new LinhaConsultarAdapter(this, pessoas));
+
     }
 
 

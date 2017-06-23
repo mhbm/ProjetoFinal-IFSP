@@ -21,4 +21,6 @@
     <string name="codigoPessoa">Código</string>
     <string name="excluir">Excluir</string>
     <string name="editar">Editar</string>
+    <string name="listavazia">Não contém nenhum registro no banco de dados</string>
+    <string name="alterar">Alterar Dados</string>
 </resources>
