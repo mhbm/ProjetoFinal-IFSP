@@ -48,7 +48,7 @@ public class PessoaController {
         contentValues.put("email", pessoaModel.getEmail());
 
         /*REALIZANDO UPDATE PELA CHAVE DA TABELA*/
-        
+
         databaseUtil.getConexaoDataBase().update("pessoas", contentValues, "idPessoa = ?", new String[]{Integer.toString(pessoaModel.getCodigo())});
     }
 
