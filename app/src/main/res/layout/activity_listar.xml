@@ -11,15 +11,15 @@
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteY="0dp"
+        android:visibility="visible"/>
 
     <TextView
         android:id="@+id/textViewPessoasVazia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="@string/listavazia"
-        android:visibility="invisible"
-        />
-
+        android:visibility="visible" />
 
 </android.support.constraint.ConstraintLayout>

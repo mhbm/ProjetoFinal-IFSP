@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,6 +36,7 @@ public class LinhaConsultarAdapter extends BaseAdapter {
     PessoaController pessoaController;
 
     TextView listaVazia ;
+    ListView listPessoas;
 
     //CRIANDO UM OBJETO DA NOSSA ATIVIDADE QUE CONTEM A LISTA
     private ListarActivity consultarActivity;
@@ -48,6 +50,17 @@ public class LinhaConsultarAdapter extends BaseAdapter {
         this.layoutInflater = (LayoutInflater) this.consultarActivity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.pessoaController = new PessoaController(consultarActivity);
         this.listaVazia = (TextView) this.consultarActivity.findViewById(R.id.textViewPessoasVazia);
+        this.listPessoas = (ListView) this.consultarActivity.findViewById(R.id.listViewPessoas);
+
+        if(getCount()==0) {
+            listaVazia.setVisibility(View.VISIBLE);
+            listPessoas.setVisibility(View.INVISIBLE);
+        } else {
+            listaVazia.setVisibility(View.INVISIBLE);
+            listPessoas.setVisibility(View.VISIBLE);
+        }
+
+
     }
 
     //RETORNA A QUANTIDADE DE REGISTROS DA LISTA
