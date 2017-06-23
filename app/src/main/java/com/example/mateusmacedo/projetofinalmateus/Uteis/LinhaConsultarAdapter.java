@@ -168,6 +168,15 @@ public class LinhaConsultarAdapter extends BaseAdapter {
 
         this.pessoaModels.clear();
         this.pessoaModels = pessoaController.selecionarTodos();
+
+        if(getCount()==0) {
+            listaVazia.setVisibility(View.VISIBLE);
+            listPessoas.setVisibility(View.INVISIBLE);
+        } else {
+            listaVazia.setVisibility(View.INVISIBLE);
+            listPessoas.setVisibility(View.VISIBLE);
+        }
+
         this.notifyDataSetChanged();
     }
 
