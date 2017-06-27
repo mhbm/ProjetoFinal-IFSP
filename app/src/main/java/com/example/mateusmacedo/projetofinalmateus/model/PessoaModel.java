@@ -1,5 +1,8 @@
 package com.example.mateusmacedo.projetofinalmateus.model;
 
+import android.text.TextUtils;
+import android.util.Patterns;
+
 /**
  * Created by lsitec101.macedo on 22/06/17.
  */
@@ -58,5 +61,19 @@ public class PessoaModel {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public boolean isValidEmail(CharSequence email) {
+        if (!TextUtils.isEmpty(email)) {
+            return Patterns.EMAIL_ADDRESS.matcher(email).matches();
+        }
+        return false;
+    }
+
+    public boolean isValidPhoneNumber(CharSequence phoneNumber) {
+        if (phoneNumber.length() >= 13 ) {
+            return Patterns.PHONE.matcher(phoneNumber).matches();
+        }
+        return false;
     }
 }

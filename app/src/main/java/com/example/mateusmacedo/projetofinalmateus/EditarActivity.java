@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.app.AlertDialog;
 
+import com.example.mateusmacedo.projetofinalmateus.Uteis.MaskWatcher;
 import com.example.mateusmacedo.projetofinalmateus.Uteis.Uteis;
 import com.example.mateusmacedo.projetofinalmateus.controller.PessoaController;
 import com.example.mateusmacedo.projetofinalmateus.model.PessoaModel;
@@ -49,8 +50,10 @@ public class EditarActivity extends AppCompatActivity {
 
         editTextNome = (EditText) this.findViewById(R.id.editTextNomeEditar);
         editTextCpf = (EditText) this.findViewById(R.id.editTextCpfEditar);
+        editTextCpf.addTextChangedListener(MaskWatcher.buildCpf());
         editTextIdade = (EditText) this.findViewById(R.id.editTextIdadeEditar);
         editTextTelefone = (EditText) this.findViewById(R.id.editTextTelefoneEditar);
+        editTextTelefone.addTextChangedListener(MaskWatcher.buildPhone());
         editTextEmail = (EditText) this.findViewById(R.id.editTextEmailEditar);
         buttonAlterar = (Button) this.findViewById(R.id.buttonAlterar);
         buttonVoltar = (Button) this.findViewById(R.id.buttonVoltar);

@@ -36,7 +36,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/cpf"
-
         android:layout_marginLeft="20dp"
         />
 
@@ -46,7 +45,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:inputType="number"
-        android:maxLength="11"
+        android:digits="0123456789.-"
+        android:maxLength="14"
         />
 
     <TextView
@@ -79,8 +79,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
-        android:maxLength="11"
-        android:inputType="number" />
+        android:maxLength="14"
+        android:inputType="phone" />
 
     <TextView
         android:id="@+id/textView5"

@@ -29,7 +29,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:maxLength="11"
+        android:digits="0123456789.-"
+        android:maxLength="14"
         android:id="@+id/editTextCpfEditar" />
 
     <TextView
@@ -58,8 +59,8 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:maxLength="11"
+        android:maxLength="14"
+        android:inputType="phone"
         android:id="@+id/editTextTelefoneEditar" />
 
     <TextView

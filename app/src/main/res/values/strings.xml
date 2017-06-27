@@ -23,5 +23,7 @@
     <string name="editar">Editar</string>
     <string name="listavazia">Não contém nenhum registro no banco de dados</string>
     <string name="alterar">Alterar Dados</string>
+    <string name="email_invalido">Email inválido</string>
+    <string name="phone_invalido">Telefone inválido</string>
 
 </resources>
