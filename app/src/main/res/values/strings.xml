@@ -25,5 +25,6 @@
     <string name="alterar">Alterar Dados</string>
     <string name="email_invalido">Email inválido</string>
     <string name="phone_invalido">Telefone inválido</string>
+    <string name="cpf_invalido">CPF é inválido</string>
 
 </resources>

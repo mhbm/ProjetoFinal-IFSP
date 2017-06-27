@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by lsitec101.macedo on 23/06/17.
+ * Created by Mateus Macedo on 23/06/17.
  */
 
 public class LinhaConsultarAdapter extends BaseAdapter {

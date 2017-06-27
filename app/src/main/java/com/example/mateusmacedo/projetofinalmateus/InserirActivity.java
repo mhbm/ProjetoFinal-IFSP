@@ -128,9 +128,16 @@ public class InserirActivity extends AppCompatActivity {
 
                 Uteis.Alert(this, this.getString(R.string.phone_invalido));
 
-                editTextEmail.requestFocus();
+                editTextTelefone.requestFocus();
+
+            } else if (!pessoaModel.isValidCpf(editTextCpf.getText().toString())){
+
+                Uteis.Alert(this, this.getString(R.string.cpf_invalido));
+
+                editTextCpf.requestFocus();
 
             } else {
+
 
                 /*SETANDO O VALOR DO CAMPO NOME*/
                 pessoaModel.setNome(editTextNome.getText().toString().trim());

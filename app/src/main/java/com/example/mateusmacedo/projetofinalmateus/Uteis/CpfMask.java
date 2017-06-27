@@ -4,7 +4,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 
 /**
- * Created by lsitec101.macedo on 27/06/17.
+ * Created by Mateus Macedo on 27/06/17.
  */
 
 public class CpfMask implements TextWatcher {

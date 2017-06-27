@@ -5,7 +5,7 @@ import android.text.TextWatcher;
 import android.widget.EditText;
 
 /**
- * Created by lsitec101.macedo on 27/06/17.
+ * Created by Mateus Macedo on 27/06/17.
  */
 
 public class PhoneMask {

@@ -16,7 +16,7 @@ import com.example.mateusmacedo.projetofinalmateus.controller.PessoaController;
 import com.example.mateusmacedo.projetofinalmateus.model.PessoaModel;
 
 /**
- * Created by lsitec101.macedo on 23/06/17.
+ * Created by Mateus Macedo on 23/06/17.
  */
 
 public class EditarActivity extends AppCompatActivity {
@@ -141,7 +141,13 @@ public class EditarActivity extends AppCompatActivity {
 
                 Uteis.Alert(this, this.getString(R.string.phone_invalido));
 
-                editTextEmail.requestFocus();
+                editTextTelefone.requestFocus();
+
+            } else if (!pessoaModel.isValidCpf(editTextCpf.getText().toString())){
+
+                Uteis.Alert(this, this.getString(R.string.cpf_invalido));
+
+                editTextCpf.requestFocus();
 
             } else {
 
