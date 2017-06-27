@@ -7,7 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.mateusmacedo.projetofinalmateus.Uteis.MaskWatcher;
+import com.example.mateusmacedo.projetofinalmateus.Uteis.CpfMask;
+import com.example.mateusmacedo.projetofinalmateus.Uteis.PhoneMask;
 import com.example.mateusmacedo.projetofinalmateus.Uteis.Uteis;
 import com.example.mateusmacedo.projetofinalmateus.controller.PessoaController;
 import com.example.mateusmacedo.projetofinalmateus.model.PessoaModel;
@@ -38,10 +39,10 @@ public class InserirActivity extends AppCompatActivity {
     protected void setarVariaveis() {
         this.editTextNome = (EditText) this.findViewById(R.id.nomePessoa);
         this.editTextCpf = (EditText) this.findViewById(R.id.cpf);
-        this.editTextCpf.addTextChangedListener(MaskWatcher.buildCpf());
+        this.editTextCpf.addTextChangedListener(new CpfMask());
         this.editTextIdade = (EditText) this.findViewById(R.id.idade);
         this.editTextTelefone = (EditText) this.findViewById(R.id.telefone);
-        this.editTextTelefone.addTextChangedListener(MaskWatcher.buildPhone());
+        this.editTextTelefone.addTextChangedListener(PhoneMask.insert(editTextTelefone));
         this.editTextEmail = (EditText) this.findViewById(R.id.email);
         buttonVoltarInicio = (Button) findViewById(R.id.btnvoltarinicio);
         buttonSalvarCadastro = (Button) findViewById(R.id.btninserir);

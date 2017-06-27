@@ -7,22 +7,10 @@ import android.text.TextWatcher;
  * Created by lsitec101.macedo on 27/06/17.
  */
 
-public class MaskWatcher implements TextWatcher {
+public class CpfMask implements TextWatcher {
     private boolean isRunning = false;
     private boolean isDeleting = false;
-    private final String mask;
-
-    public MaskWatcher(String mask) {
-        this.mask = mask;
-    }
-
-    public static MaskWatcher buildCpf() {
-        return new MaskWatcher("###.###.###-##");
-    }
-
-    public static MaskWatcher buildPhone() {
-        return new MaskWatcher("(##)#####-####");
-    }
+    private final String mask = "###.###.###-##";
 
     @Override
     public void beforeTextChanged(CharSequence charSequence, int start, int count, int after) {

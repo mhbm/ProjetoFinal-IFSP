@@ -71,8 +71,8 @@ public class PessoaModel {
     }
 
     public boolean isValidPhoneNumber(CharSequence phoneNumber) {
-        if (phoneNumber.length() >= 13 ) {
-            return Patterns.PHONE.matcher(phoneNumber).matches();
+        if (phoneNumber.length() == 9 || phoneNumber.length() == 10 || phoneNumber.length() == 13 || phoneNumber.length() == 14) {
+            return true;
         }
         return false;
     }
