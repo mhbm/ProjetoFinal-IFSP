@@ -63,14 +63,14 @@ public class PessoaModel {
         this.email = email;
     }
 
-    public boolean isValidEmail(CharSequence email) {
+    public static boolean isValidEmail(CharSequence email) {
         if (!TextUtils.isEmpty(email)) {
             return Patterns.EMAIL_ADDRESS.matcher(email).matches();
         }
         return false;
     }
 
-    public boolean isValidPhoneNumber(CharSequence phoneNumber) {
+    public static boolean isValidPhoneNumber(CharSequence phoneNumber) {
         if (phoneNumber.length() == 9 || phoneNumber.length() == 10 || phoneNumber.length() == 13 || phoneNumber.length() == 14) {
             return true;
         }
@@ -80,7 +80,7 @@ public class PessoaModel {
     // CPF
     private static final int[] weightSsn = {11, 10, 9, 8, 7, 6, 5, 4, 3, 2};
 
-    private int calculate(String str, final int[] weight) {
+    private static int calculate(String str, final int[] weight) {
         int sum = 0;
         for (int i = str.length() - 1, digit; i >= 0; i--) {
             digit = Integer.parseInt(str.substring(i, i + 1));
@@ -90,7 +90,7 @@ public class PessoaModel {
         return sum > 9 ? 0 : sum;
     }
 
-    public boolean isValidCpf(String ssn) {
+    public static boolean isValidCpf(String ssn) {
 
         ssn = ssn.replaceAll("\\.", "");
         ssn = ssn.replaceAll("\\-", "");
